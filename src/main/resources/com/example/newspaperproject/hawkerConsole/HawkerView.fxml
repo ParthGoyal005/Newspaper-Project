@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane prefHeight="498.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.newspaperproject.hawkerConsole.HawkerController">
+   <content>
+      <AnchorPane prefHeight="483.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="198.0" layoutY="21.0" text="Hawkers Console">
+               <font>
+                  <Font name="SansSerif Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="80.0" fitWidth="91.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="27.0" layoutY="91.0" text="Hawker ID">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="158.0" text="Name">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="224.0" text="Address">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="291.0" text="Contact">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="354.0" text="Aadhaar no.">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="325.0" layoutY="158.0" text="All Areas">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="322.0" layoutY="232.0" text="Selected Areas">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="325.0" layoutY="311.0" text="Date of joining">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboHawkerIds" editable="true" layoutX="28.0" layoutY="111.0" prefWidth="150.0" />
+            <TextField fx:id="textName" layoutX="28.0" layoutY="180.0" promptText="Enter the nameame" />
+            <TextField fx:id="textAddress" layoutX="28.0" layoutY="249.0" promptText="Enter the address" />
+            <TextField fx:id="textContact" layoutX="28.0" layoutY="313.0" promptText="Enter the contact" />
+            <TextField fx:id="textAadhaar" layoutX="28.0" layoutY="376.0" promptText="Enter the aadhaar no." />
+            <TextField fx:id="textSelectedAreas" layoutX="323.0" layoutY="261.0" prefHeight="25.0" prefWidth="151.0" />
+            <ComboBox fx:id="comboAllAreas" layoutX="324.0" layoutY="180.0" onAction="#setSelected" prefWidth="150.0" />
+            <DatePicker fx:id="doj" layoutX="324.0" layoutY="341.0" prefHeight="25.0" prefWidth="150.0" />
+            <ImageView fx:id="logo" fitHeight="89.0" fitWidth="91.0" layoutX="17.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="hawkerImage" fitHeight="89.0" fitWidth="91.0" layoutX="497.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@profile-picture.png" />
+               </image></ImageView>
+            <Button layoutX="510.0" layoutY="111.0" mnemonicParsing="false" onAction="#Browse" text="Browse">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="329.0" layoutY="435.0" mnemonicParsing="false" onAction="#Clear" prefHeight="34.0" prefWidth="95.0" style="-fx-border-radius: 5; -fx-background-color: #ffffff;" text="Clear">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="40.0" layoutY="435.0" mnemonicParsing="false" onAction="#Save" prefHeight="34.0" prefWidth="95.0" style="-fx-background-color: #007BFF; -fx-border-radius: 5;" text="Recruit Now" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="193.0" layoutY="435.0" mnemonicParsing="false" onAction="#Update" prefHeight="34.0" prefWidth="95.0" style="-fx-border-radius: 5; -fx-border-color: #007BFF; -fx-background-color: #F4F4F7;" text="Modify">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="464.0" layoutY="435.0" mnemonicParsing="false" onAction="#Delete" prefHeight="34.0" prefWidth="95.0" style="-fx-border-radius: 5; -fx-background-color: #ffffff;" text="Delete">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="211.0" layoutY="111.0" mnemonicParsing="false" onAction="#Fetch" text="Fetch">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Button>
+            <Line endX="6.66668701171875" endY="321.0" layoutX="302.0" layoutY="77.0" startX="6.66668701171875" startY="34.99999237060547" stroke="#00000054" />
+            <Label fx:id="messageLabel" alignment="CENTER" layoutX="265.0" layoutY="401.0" style="-fx-border-radius: 10; -fx-background-color: #626262;" textFill="WHITE" visible="false">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

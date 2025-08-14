@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.newspaperproject.billing.BillingController">
+   <children>
+      <Label fx:id="messageLabel" layoutX="293.0" layoutY="368.0" style="-fx-background-color: #626262; -fx-border-radius: 10;" textFill="WHITE" visible="false">
+         <font>
+            <Font name="SansSerif Regular" size="12.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="95.0" layoutX="25.0" layoutY="137.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 20; -fx-arc-width: 20;" width="575.0" />
+      <Label layoutX="45.0" layoutY="97.0" prefHeight="21.0" prefWidth="127.0" text="Mobile number">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="367.0" layoutY="95.0" mnemonicParsing="false" onAction="#dofind" prefHeight="25.0" prefWidth="82.0" text="Fetch">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="44.0" layoutY="146.0" prefHeight="21.0" prefWidth="73.0" text="Name">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="44.0" layoutY="180.0" prefHeight="25.0" prefWidth="101.0" />
+      <Label layoutX="220.0" layoutY="146.0" prefHeight="21.0" prefWidth="82.0" text="Date of Start">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="441.0" layoutY="146.0" prefHeight="21.0" prefWidth="73.0" text="Total price">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txttotalprice" layoutX="441.0" layoutY="180.0" prefHeight="25.0" prefWidth="112.0" />
+      <Label layoutX="116.0" layoutY="243.0" prefHeight="21.0" prefWidth="73.0" text="Date Upto">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="DatepickerDU" layoutX="116.0" layoutY="274.0" prefHeight="25.0" prefWidth="112.0" />
+      <Label layoutX="386.0" layoutY="243.0" prefHeight="21.0" prefWidth="127.0" text="Decrease Days">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtlessdays" editable="false" layoutX="390.0" layoutY="274.0" prefHeight="25.0" prefWidth="133.0" />
+      <TextField fx:id="txtmobile" layoutX="176.0" layoutY="95.0" prefHeight="25.0" prefWidth="140.0" />
+      <Button alignment="CENTER" layoutX="257.0" layoutY="316.0" mnemonicParsing="false" onAction="#doGenerateBill" prefHeight="33.0" prefWidth="119.0" text="Generate Bill" textAlignment="CENTER">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="444.0" layoutY="374.0" mnemonicParsing="false" onAction="#DoSaveBill" prefHeight="25.0" prefWidth="82.0" text="Save Bill">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="TxtBillamount" layoutX="188.0" layoutY="374.0" prefHeight="25.0" prefWidth="151.0" />
+      <Label layoutX="54.0" layoutY="376.0" prefHeight="21.0" prefWidth="101.0" text="Bill Amount">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="DPdos" layoutX="220.0" layoutY="180.0" prefHeight="25.0" prefWidth="127.0" />
+      <Label layoutX="275.0" layoutY="30.0" text="Billing">
+         <font>
+            <Font name="SansSerif Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="73.0" fitWidth="101.0" layoutX="498.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images-removebg-preview.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
